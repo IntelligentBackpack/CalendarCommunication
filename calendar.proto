@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package book;
+package calendar;
 
 // package to use for generated java classses
-option java_package = "book.communication";
+option java_package = "calendar.communication";
 
 // message, enum should be define in package level 
 option java_multiple_files = true;
@@ -11,4 +11,22 @@ option java_multiple_files = true;
 message BasicMessage {
     string message = 1;
     repeated string message2 = 2; 
+}
+
+message Calendar {
+    string email_executor = 1;
+    string Anno_Scolastico = 2;
+    int32 Istituto = 3;
+    string Classe = 4;
+    int32 ID = 5;
+}
+
+message Lesson {
+    string email_executor = 1;
+    string Nome_lezione = 2;
+    int32 Materia = 3;
+    string Professore = 4;
+    string Ora_inizio = 5;
+    string Ora_fine = 6;
+    int32 ID_Calendario = 7;
 }
