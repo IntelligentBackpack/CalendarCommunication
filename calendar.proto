@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package book;
+
+// package to use for generated java classses
+option java_package = "book.communication";
+
+// message, enum should be define in package level 
+option java_multiple_files = true;
+
+message BasicMessage {
+    string message = 1;
+    repeated string message2 = 2; 
+}
