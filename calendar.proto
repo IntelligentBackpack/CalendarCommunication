@@ -28,5 +28,12 @@ message Lesson {
     string Professore = 4;
     string Ora_inizio = 5;
     string Ora_fine = 6;
-    int32 ID_Calendario = 7;
+    string Giorno = 7;
+    int32 ID_Calendario = 8;
+}
+
+message BookForLesson {
+    string email_executor = 1;
+    Lesson lesson = 2;
+    string ISBN = 3;
 }
