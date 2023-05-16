@@ -37,3 +37,10 @@ message BookForLesson {
     Lesson lesson = 2;
     string ISBN = 3;
 }
+
+message UserInformations {
+    string email_user = 1;
+    repeated string classes = 2;
+    repeated string subjects = 3;
+    repeated string insitutes = 4;
+}
