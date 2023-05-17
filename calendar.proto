@@ -22,7 +22,6 @@ message Calendar {
 }
 
 message Lesson {
-    string email_executor = 1;
     string Nome_lezione = 2;
     int32 Materia = 3;
     string Professore = 4;
@@ -32,6 +31,10 @@ message Lesson {
     int32 ID_Calendario = 8;
 }
 
+message LessonActions {
+    string email_executor = 1;
+    Lesson lesson = 2;
+}
 message BookForLesson {
     string email_executor = 1;
     Lesson lesson = 2;
