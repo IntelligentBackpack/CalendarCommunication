@@ -37,10 +37,26 @@ message LessonActions {
     string email_executor = 1;
     Lesson lesson = 2;
 }
+
 message BookForLesson {
     string email_executor = 1;
     Lesson lesson = 2;
     string ISBN = 3;
+}
+
+message ChangeLessonBookPeriodDate {
+    string email_executor = 1;
+    Lesson lesson = 2;
+    repeated string ISBN = 3;
+    string nuovaInizioData = 4;
+    string nuovaFineData = 5;
+}
+
+message ChangeLessonPeriodDate {
+    string email_executor = 1;
+    Lesson lesson = 2;
+    string nuovaInizioData = 3;
+    string nuovaFineData = 4;
 }
 
 message UserInformations {
