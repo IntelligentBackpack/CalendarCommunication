@@ -59,9 +59,57 @@ message ChangeLessonPeriodDate {
     string nuovaFineData = 4;
 }
 
+message ChangeLessonDay {
+    string email_executor = 1;
+    Lesson lesson = 2;
+    string nuovaInizioData = 3;
+    string nuovaFineData = 4;
+    string nuovoGiorno = 5;
+}
+
+message ChangeLessonHours {
+    string email_executor = 1;
+    Lesson lesson = 2;
+    string nuovaInizioData = 3;
+    string nuovaFineData = 4;
+    string nuovaOraInizio = 5;
+    string nuovaOraFine = 6;
+}
+
 message UserInformations {
     string email_user = 1;
     repeated string classes = 2;
     repeated string subjects = 3;
     repeated string insitutes = 4;
+}
+
+message CalendarID {
+    string anno = 1;
+    int32 istituto = 2;
+    string classe = 3;
+}
+
+message CalendarExplicit {
+    string anno = 1;
+    string nomeIstituto = 2;
+    string nomeCitta = 3;
+    string classe = 4;
+}
+
+message LessonInDate {
+    string date = 1;
+    string giorno = 2;
+    CalendarID CalendarID = 3;
+    CalendarExplicit CalendarExplicit = 4;
+}
+
+message Lessons {
+    repeated Lesson Lessons = 1;
+}
+
+message DeleteLessonsOfProfessor {
+    string email_executor = 1;
+    string professor = 2;
+    CalendarID CalendarID = 3;
+    CalendarExplicit CalendarExplicit = 4;
 }
