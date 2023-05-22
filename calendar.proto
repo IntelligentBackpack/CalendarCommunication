@@ -38,10 +38,10 @@ message LessonActions {
     Lesson lesson = 2;
 }
 
-message BookForLesson {
+message BooksForLesson {
     string email_executor = 1;
     Lesson lesson = 2;
-    string ISBN = 3;
+    repeated string ISBNs = 3;
 }
 
 message ChangeLessonBookPeriodDate {
