@@ -113,3 +113,8 @@ message DeleteLessonsOfProfessor {
     CalendarID CalendarID = 3;
     CalendarExplicit CalendarExplicit = 4;
 }
+
+message LessonsOfYear {
+    string email = 1;
+    int32 anno = 2;
+}
