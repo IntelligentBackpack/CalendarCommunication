@@ -118,3 +118,12 @@ message LessonsOfYear {
     string email = 1;
     int32 anno = 2;
 }
+
+message Subject {
+    string ID = 1;
+    string Name = 2;
+}
+
+message Subjects {
+    repeated Subject subjects = 1;
+}
