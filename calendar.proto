@@ -78,9 +78,12 @@ message ChangeLessonHours {
 
 message UserInformations {
     string email_user = 1;
-    repeated string classes = 2;
-    repeated string subjects = 3;
-    repeated string insitutes = 4;
+    string nome = 2;
+    string cognome = 3;
+    repeated string classes = 4;
+    repeated string subjects = 5;
+    repeated string insitutesName = 6;
+    repeated string insitutesCitta = 7;
 }
 
 message CalendarID {
